@@ -1,6 +1,7 @@
-package com.BackApiTest.BackApiTest.product;
+package com.BackApiTest.BackApiTest.repository;
 
 
+import com.BackApiTest.BackApiTest.entity.Product;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

@@ -1,7 +1,9 @@
-package com.BackApiTest.BackApiTest.product;
+package com.BackApiTest.BackApiTest.controller;
 
 
 
+import com.BackApiTest.BackApiTest.entity.Product;
+import com.BackApiTest.BackApiTest.service.ProductService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;

@@ -1,4 +1,4 @@
-package com.BackApiTest.BackApiTest.product;
+package com.BackApiTest.BackApiTest.entity;
 
 
 import javax.persistence.Entity;
