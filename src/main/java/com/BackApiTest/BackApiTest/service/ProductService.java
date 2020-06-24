@@ -1,6 +1,8 @@
-package com.BackApiTest.BackApiTest.product;
+package com.BackApiTest.BackApiTest.service;
 
 
+import com.BackApiTest.BackApiTest.entity.Product;
+import com.BackApiTest.BackApiTest.repository.ProductRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
