@@ -1,8 +1,9 @@
-package com.BackApiTest.BackApiTest.chat;
+package com.BackApiTest.BackApiTest.chat.discussion;
 
 
-import com.BackApiTest.BackApiTest.Patient.Patient;
-import com.BackApiTest.BackApiTest.Practician.Practician;
+import com.BackApiTest.BackApiTest.chat.message.Message;
+import com.BackApiTest.BackApiTest.patient.Patient;
+import com.BackApiTest.BackApiTest.practician.Practician;
 
 import javax.persistence.*;
 import java.util.List;

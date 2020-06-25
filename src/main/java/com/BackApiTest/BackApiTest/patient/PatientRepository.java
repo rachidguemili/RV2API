@@ -1,6 +1,5 @@
-package com.BackApiTest.BackApiTest.Patient;
+package com.BackApiTest.BackApiTest.patient;
 
-import com.BackApiTest.BackApiTest.Patient.Patient;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

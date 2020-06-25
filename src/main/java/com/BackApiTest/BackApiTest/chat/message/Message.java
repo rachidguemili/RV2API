@@ -1,5 +1,7 @@
-package com.BackApiTest.BackApiTest.chat;
+package com.BackApiTest.BackApiTest.chat.message;
 
+
+import com.BackApiTest.BackApiTest.chat.discussion.Discussion;
 
 import javax.persistence.*;
 import java.sql.Date;
@@ -14,7 +16,7 @@ public class Message {
 	private Date date;
 
 	@ManyToOne
-	private  Discussion discussion;
+	private Discussion discussion;
 
 	public Message() {
 	}

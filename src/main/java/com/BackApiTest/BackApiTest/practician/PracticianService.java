@@ -1,4 +1,4 @@
-package com.BackApiTest.BackApiTest.Practician;
+package com.BackApiTest.BackApiTest.practician;
 
 
 import org.springframework.beans.factory.annotation.Autowired;

@@ -1,4 +1,4 @@
-package com.BackApiTest.BackApiTest.chat;
+package com.BackApiTest.BackApiTest.practician;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -6,11 +6,9 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 @RequestMapping
-public class MessageController {
+public class PracticianController {
 
-
-	@Autowired MessageService messageService;
-
+	@Autowired PracticianService practicianService;
 
 
 }

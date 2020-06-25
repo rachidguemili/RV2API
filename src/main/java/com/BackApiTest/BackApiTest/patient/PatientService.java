@@ -1,6 +1,5 @@
-package com.BackApiTest.BackApiTest.Patient;
+package com.BackApiTest.BackApiTest.patient;
 
-import com.BackApiTest.BackApiTest.Patient.PatientRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

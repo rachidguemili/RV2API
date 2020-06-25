@@ -1,6 +1,6 @@
-package com.BackApiTest.BackApiTest.Patient;
+package com.BackApiTest.BackApiTest.patient;
 
-import com.BackApiTest.BackApiTest.Practician.Practician;
+import com.BackApiTest.BackApiTest.practician.Practician;
 
 import javax.persistence.*;
 
