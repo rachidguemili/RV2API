@@ -16,7 +16,7 @@ public class Discussion {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private  Long id;
 
-	@OneToMany(mappedBy = "discussion")
+	@OneToMany
 	private List<Message> messageList;
 
 	@OneToOne
