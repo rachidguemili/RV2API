@@ -15,17 +15,27 @@ public class Discussion {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private  Long id;
+	private  String message;
 
-	@OneToMany
-	private List<Message> messageList;
+//
+//	@OneToMany
+//	private List<Message> messageList;
 
-	@OneToOne
+	@ManyToOne
 	private Practician practician;
 
-	@OneToOne
+	@ManyToOne
 	private Patient patient ;
 
 	public Discussion() {
+	}
+
+	public String getMessage() {
+		return message;
+	}
+
+	public void setMessage(String message) {
+		this.message = message;
 	}
 
 	public Long getId() {
@@ -36,13 +46,13 @@ public class Discussion {
 		this.id = id;
 	}
 
-	public List<Message> getMessageList() {
-		return messageList;
-	}
-
-	public void setMessageList(List<Message> messageList) {
-		this.messageList = messageList;
-	}
+//	public List<Message> getMessageList() {
+//		return messageList;
+//	}
+//
+//	public void setMessageList(List<Message> messageList) {
+//		this.messageList = messageList;
+//	}
 
 	public Practician getPractician() {
 		return practician;
