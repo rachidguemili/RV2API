@@ -20,8 +20,8 @@ public class Practician {
 	private String password;
 
 	@OneToMany(mappedBy = "practician")
+	@JsonManagedReference
 	private List<Patient> patientList;
-
 
 	public Practician() {
 

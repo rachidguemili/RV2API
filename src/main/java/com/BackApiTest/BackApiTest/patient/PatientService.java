@@ -1,5 +1,6 @@
 package com.BackApiTest.BackApiTest.patient;
 
+import com.BackApiTest.BackApiTest.practician.Practician;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -36,6 +37,13 @@ public class PatientService {
 	}
 
 	public Patient addPatient(Patient patient) {
+		Patient tempoPatient;
+
+		if (patient.getId()== null) return null;
+
+
+		Practician tempoPractician = patient.getPractician();
+		patient.setPractician(tempoPractician);
 		return  patientRepository.save(patient);
 	}
 
