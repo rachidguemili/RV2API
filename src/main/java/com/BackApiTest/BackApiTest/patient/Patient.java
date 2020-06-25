@@ -1,6 +1,8 @@
 package com.BackApiTest.BackApiTest.patient;
 
 import com.BackApiTest.BackApiTest.practician.Practician;
+import com.fasterxml.jackson.annotation.JsonBackReference;
+import com.fasterxml.jackson.annotation.JsonManagedReference;
 
 import javax.persistence.*;
 

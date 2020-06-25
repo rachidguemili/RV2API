@@ -1,6 +1,7 @@
 package com.BackApiTest.BackApiTest.practician;
 
 import com.BackApiTest.BackApiTest.patient.Patient;
+import com.fasterxml.jackson.annotation.JsonManagedReference;
 
 import javax.persistence.*;
 import java.util.List;
@@ -18,7 +19,7 @@ public class Practician {
 	private String userName;
 	private String password;
 
-	@OneToMany
+	@OneToMany(mappedBy = "practician")
 	private List<Patient> patientList;
 
 
