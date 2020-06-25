@@ -44,11 +44,4 @@ public class SMS {
 	}
 
 
-	@Override
-	public String toString() {
-		return "SMS{" +
-				"to='" + to + '\'' +
-				", message='" + message + '\'' +
-				'}';
-	}
 }

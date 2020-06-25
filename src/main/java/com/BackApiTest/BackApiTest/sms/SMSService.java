@@ -1,17 +1,14 @@
 package com.BackApiTest.BackApiTest.sms;
 
 
-import com.BackApiTest.BackApiTest.sms.SMS;
+import com.twilio.Twilio;
 import com.twilio.rest.api.v2010.account.Message;
 import com.twilio.type.PhoneNumber;
-import com.twilio.Twilio;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
-import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Service;
 import org.springframework.util.MultiValueMap;
 
-import java.net.URI;
 import java.util.List;
 
 @Service
@@ -29,20 +26,36 @@ public class SMSService {
 	@Value("#{systemEnvironment['TWILIO_PHONE_NUMBER']}")
 	private String FROM_NUMBER;
 
+
 	public List<SMS> getAll(){
 		return repository.findAll();
 	}
 
-	public Message send() {
-		Twilio.init("ACc6f9555065da7426cabcc3066aa88c17", "4ea7f54c637cba183ab7c6a8c627bc70");
+	public SMS getById(Long id){
+		return repository.findById(id).get();
+	}
 
-		Message message = Message.creator(new PhoneNumber("+15005550010"),
-				new PhoneNumber("+15005550006"),
-				"Sample Twilio SMS using Java")
+	public Message send() {
+		Twilio.init("ACce572c1b0688ed980807f9871cb8866f", "685f90a290f07af112832addb464f426");
+
+
+
+		Message message = Message.creator(new PhoneNumber("+336 05567772"),
+				new PhoneNumber("+12056971633"),
+				"Ceci est un message de votre médecin")
 				.create();
-		System.out.println("here is my id:"+message.getSid());// Unique resource ID created to manage this transaction
+
+		//System.out.println("here is my id:"+message.getSid());// Unique resource ID created to manage this transaction
 		return message;
 	}
+
+	public SMS save(SMS Sms){
+		return repository.save(Sms);
+	}
+
+
+
+
 
 	public void receive(MultiValueMap<String, String> smscallback) {
 	}
