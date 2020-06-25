@@ -40,7 +40,7 @@ public class SMSService {
 
 
 
-		Message message = Message.creator(new PhoneNumber("+336 05567772"),
+		Message message = Message.creator(new PhoneNumber("+33 6 05 56 7772"),
 				new PhoneNumber("+12056971633"),
 				"Ceci est un message de votre médecin")
 				.create();
