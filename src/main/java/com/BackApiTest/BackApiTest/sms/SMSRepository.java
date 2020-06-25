@@ -1,6 +1,6 @@
-package com.BackApiTest.BackApiTest.repository;
+package com.BackApiTest.BackApiTest.sms;
 
-import com.BackApiTest.BackApiTest.entity.SMS;
+
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
