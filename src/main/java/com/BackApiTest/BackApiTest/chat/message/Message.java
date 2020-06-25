@@ -2,6 +2,7 @@ package com.BackApiTest.BackApiTest.chat.message;
 
 
 import com.BackApiTest.BackApiTest.chat.discussion.Discussion;
+import com.BackApiTest.BackApiTest.patient.Patient;
 
 import javax.persistence.*;
 import java.sql.Date;
@@ -16,7 +17,10 @@ public class Message {
 	private Date date;
 
 	@ManyToOne
+	@JoinColumn(name = "discussion_id")
 	private Discussion discussion;
+
+
 
 	public Message() {
 	}

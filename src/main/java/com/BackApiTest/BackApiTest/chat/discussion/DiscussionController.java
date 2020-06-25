@@ -8,13 +8,13 @@ import org.springframework.web.bind.annotation.RestController;
 import java.util.List;
 
 @RestController
-@RequestMapping
+@RequestMapping("/chat")
 public class DiscussionController {
 
 	@Autowired
 	DiscussionService discussionService;
 
-	@GetMapping
+	@GetMapping("/discussions")
 	public List<Discussion> getAll()
 	{
 		return discussionService.getAll();
