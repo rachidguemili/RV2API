@@ -1,5 +1,6 @@
 package com.BackApiTest.BackApiTest.practician;
 
+import com.BackApiTest.BackApiTest.chat.discussion.Discussion;
 import com.BackApiTest.BackApiTest.patient.Patient;
 
 import javax.persistence.*;
@@ -21,6 +22,9 @@ public class Practician {
 	@OneToMany
 	private List<Patient> patientList;
 
+	@OneToMany
+	private List<Discussion> discussion;
+
 
 	public Practician() {
 
@@ -41,7 +45,7 @@ public class Practician {
 	}
 
 	public void setPassword(String password) {
-		this.password = password;
+		this.password =password;
 	}
 
 	public Long getId() {
