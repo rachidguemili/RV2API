@@ -6,6 +6,7 @@ import com.BackApiTest.BackApiTest.patient.Patient;
 import com.BackApiTest.BackApiTest.practician.Practician;
 
 import javax.persistence.*;
+import java.sql.Date;
 import java.util.List;
 
 @Entity
@@ -16,6 +17,7 @@ public class Discussion {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private  Long id;
 	private  String message;
+	private Date date;
 
 //
 //	@OneToMany
@@ -28,6 +30,14 @@ public class Discussion {
 	private Patient patient ;
 
 	public Discussion() {
+	}
+
+	public Date getDate() {
+		return date;
+	}
+
+	public void setDate(Date date) {
+		this.date = date;
 	}
 
 	public String getMessage() {

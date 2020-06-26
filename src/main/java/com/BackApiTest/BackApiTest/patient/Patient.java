@@ -22,6 +22,7 @@ public class Patient {
 	private String firstName;
 	private String lastName;
 	private  Long socialSecurityNo;
+	private String phoneNumber;
 
 	@ManyToOne
 	@JoinColumn(name = "practician_id")
@@ -31,11 +32,20 @@ public class Patient {
 	@OneToMany
 	private List<Discussion> discussion;
 
+
 	@OneToMany
 	private List<SMS> smsList;
 
 
 	public Patient() {
+	}
+
+	public String getPhoneNumber() {
+		return phoneNumber;
+	}
+
+	public void setPhoneNumber(String phoneNumber) {
+		this.phoneNumber = phoneNumber;
 	}
 
 	public List<Discussion> getDiscussion() {

@@ -1,10 +1,8 @@
 package com.BackApiTest.BackApiTest.chat.discussion;
 
+import com.BackApiTest.BackApiTest.patient.Patient;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -25,7 +23,15 @@ public class DiscussionController {
 		return discussionService.getAllByPatientId(id);
 	}
 
+	@PostMapping("/{id}")
+	public  Discussion addDiscussion(@PathVariable Long id, @RequestBody Discussion discussion)
+	{
+		if (discussion.getPatient().getId()== null) return null;
 
+		Patient patient = discussion.getPatient();
+		patient.getDiscussion().add(discussion);
 
+		return discussionService.save(discussion);
+	}
 
 }

@@ -24,4 +24,8 @@ public class DiscussionService {
 	public List<Discussion> getAll() {
 		return discussionRepository.findAll();
 	}
+
+	public Discussion save(Discussion discussion) {
+	 return discussionRepository.save(discussion);
+	}
 }
