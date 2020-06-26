@@ -28,10 +28,17 @@ public class SMSController {
 		return service.getAll();
 	}
 
-	@PostMapping()
-	public Message smsSubmit() {
-		return service.send();
+	@GetMapping("/{id}")
+	public SMS getById(@PathVariable Long id){
+		return service.getById(id);
 	}
+
+	@PostMapping()
+	public SMS smsSubmit(@RequestBody SMS Sms) {
+		service.send();
+		return service.save(Sms);
+	}
+
 
 	@PostMapping("/smsback")
 	public void smsCallback(@RequestBody MultiValueMap<String, String> map) {

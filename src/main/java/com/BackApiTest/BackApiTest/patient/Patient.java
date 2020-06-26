@@ -1,10 +1,16 @@
 package com.BackApiTest.BackApiTest.patient;
 
+import com.BackApiTest.BackApiTest.chat.discussion.Discussion;
 import com.BackApiTest.BackApiTest.practician.Practician;
+
 import com.fasterxml.jackson.annotation.JsonBackReference;
 import com.fasterxml.jackson.annotation.JsonManagedReference;
 
+import com.BackApiTest.BackApiTest.sms.SMS;
+
+
 import javax.persistence.*;
+import java.util.List;
 
 @Entity
 public class Patient {
@@ -22,8 +28,32 @@ public class Patient {
 	@JsonBackReference
 	private Practician practician;
 
+	@OneToMany
+	private List<Discussion> discussion;
+
+	@OneToMany
+	private List<SMS> smsList;
+
+
 	public Patient() {
 	}
+
+	public List<Discussion> getDiscussion() {
+		return discussion;
+	}
+
+	public void setDiscussion(List<Discussion> discussion) {
+		this.discussion = discussion;
+	}
+
+	public List<SMS> getSmsList() {
+		return smsList;
+	}
+
+	public void setSmsList(List<SMS> smsList) {
+		this.smsList = smsList;
+	}
+
 
 
 	public Long getId() {
