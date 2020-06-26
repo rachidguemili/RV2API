@@ -2,7 +2,12 @@ package com.BackApiTest.BackApiTest.patient;
 
 import com.BackApiTest.BackApiTest.chat.discussion.Discussion;
 import com.BackApiTest.BackApiTest.practician.Practician;
+
+import com.fasterxml.jackson.annotation.JsonBackReference;
+import com.fasterxml.jackson.annotation.JsonManagedReference;
+
 import com.BackApiTest.BackApiTest.sms.SMS;
+
 
 import javax.persistence.*;
 import java.util.List;
@@ -20,6 +25,7 @@ public class Patient {
 
 	@ManyToOne
 	@JoinColumn(name = "practician_id")
+	@JsonBackReference
 	private Practician practician;
 
 	@OneToMany
