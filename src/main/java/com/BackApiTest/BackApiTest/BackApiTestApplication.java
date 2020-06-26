@@ -15,10 +15,6 @@ public class BackApiTestApplication {
 
 	public static void main(String[] args) {
 
-		//Message.creator()
-		System.out.println(ACCOUNT_SID);
-		System.out.println(AUTH_TOKEN);
-
 
 
 		SpringApplication.run(BackApiTestApplication.class, args);
